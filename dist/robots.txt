@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lead-conversion-site-nk3wpni7.sites.blink.new/sitemap.xml

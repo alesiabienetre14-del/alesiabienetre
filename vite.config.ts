@@ -15,6 +15,7 @@ export default defineConfig({
     host: true,
     allowedHosts: true,
   },
+  base: '/alesiabienetre/', 
   build: {
     outDir: 'dist', // dossier de sortie
   },

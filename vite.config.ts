@@ -3,8 +3,6 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  base: '/alesiabienetre/',
-  
   plugins: [react()],
   resolve: {
     alias: {
@@ -16,5 +14,9 @@ export default defineConfig({
     strictPort: true,
     host: true,
     allowedHosts: true,
-  }
+  },
+  build: {
+    outDir: 'dist', // dossier de sortie
+  },
+  root: '.', // optionnel si index.html est à la racine
 });

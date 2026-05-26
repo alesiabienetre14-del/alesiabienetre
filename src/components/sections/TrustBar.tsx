@@ -4,7 +4,7 @@ const stats = [
   { icon: Star, value: '4.8/5', label: 'Note Google', sub: '+180 avis' },
   { icon: Users, value: '5 000+', label: 'Clients satisfaits', sub: 'Depuis 2010' },
   { icon: Award, value: '15 ans', label: "D'expérience", sub: 'Massages asiatiques' },
-  { icon: Clock, value: '10h30–21h30', label: 'Tous les jours', sub: 'Avec ou sans RDV' },
+  { icon: Clock, value: '10h30–2h00', label: 'Tous les jours', sub: 'Avec ou sans RDV' },
 ]
 
 export default function TrustBar() {

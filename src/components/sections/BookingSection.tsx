@@ -57,7 +57,7 @@ export default function BookingSection() {
             </div>
             <h3 className="font-serif font-semibold text-foreground text-lg mb-1">Horaires</h3>
             <p className="text-muted-foreground text-sm mb-1">Tous les jours</p>
-            <p className="font-semibold text-foreground text-base mb-3">10h30 – 21h30</p>
+            <p className="font-semibold text-foreground text-base mb-3">10h30 – 2h00</p>
             <div className="flex items-center justify-center gap-1.5">
               <div className="w-2 h-2 rounded-full bg-green-400" />
               <span className="text-xs text-muted-foreground">Sans rendez-vous accepté</span>

@@ -47,7 +47,7 @@ export default function ContactSection() {
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wide">Horaires</p>
                   <p className="font-semibold text-foreground text-sm">Tous les jours</p>
-                  <p className="text-muted-foreground text-sm">10h30 – 21h30</p>
+                  <p className="text-muted-foreground text-sm">10h30 – 2h00</p>
                   <div className="flex items-center gap-1.5 mt-1.5">
                     <div className="w-2 h-2 rounded-full bg-green-400" />
                     <span className="text-xs text-muted-foreground">Avec ou sans rendez-vous</span>

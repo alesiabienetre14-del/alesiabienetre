@@ -69,7 +69,7 @@ export default function HeroSection() {
             <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             <span className="text-white/80 text-sm flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5" />
-              Ouvert tous les jours · 10h30 – 21h30
+              Ouvert tous les jours · 10h30 – 2h00
             </span>
           </div>
         </div>

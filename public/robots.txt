@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alesiabienetre14-del.github.io/alesiabienetre/sitemap.xml

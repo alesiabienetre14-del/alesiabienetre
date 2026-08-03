@@ -1,6 +1,6 @@
 import { Phone, Star, MapPin, Clock } from 'lucide-react'
 
-const HERO_IMG = '/alesiabienetre/images/institut-bien-etre-alesia.webp'
+const HERO_IMG = '/images/institut-bien-etre-alesia.webp'
 
 export default function HeroSection() {
   return (

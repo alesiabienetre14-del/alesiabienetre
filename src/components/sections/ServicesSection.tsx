@@ -1,9 +1,9 @@
-const MASSAGE_IMG = '/alesiabienetre/images/massage-relaxant-v2.webp'
-const STONE_IMG = '/alesiabienetre/images/massage-pierres-chaudes.webp'
-const CHINESE_IMG = '/alesiabienetre/images/massage-chinois.webp'
-const FOUR_HANDS_IMG = '/alesiabienetre/images/massage-quatre-mains.webp'
-const REFLEXOLOGY_IMG = '/alesiabienetre/images/reflexologie-plantaire.webp'
-const BEAUTY_IMG = '/alesiabienetre/images/soins-esthetiques.webp'
+const MASSAGE_IMG = '/images/massage-relaxant-v2.webp'
+const STONE_IMG = '/images/massage-pierres-chaudes.webp'
+const CHINESE_IMG = '/images/massage-chinois.webp'
+const FOUR_HANDS_IMG = '/images/massage-quatre-mains.webp'
+const REFLEXOLOGY_IMG = '/images/reflexologie-plantaire.webp'
+const BEAUTY_IMG = '/images/soins-esthetiques.webp'
 
 const services = [
   {

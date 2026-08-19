@@ -9,7 +9,7 @@ const reasons = [
   {
     icon: Clock,
     title: 'Avec ou sans rendez-vous',
-    description: 'Ouvert tous les jours de 10h30 à 2h00, sans rendez-vous obligatoire — pour vous accueillir quand vous en avez besoin.',
+    description: 'Ouvert de 10h30 à 2h00 du lundi au samedi et jusqu’à 21h30 le dimanche, sans rendez-vous obligatoire.',
   },
   {
     icon: MapPin,

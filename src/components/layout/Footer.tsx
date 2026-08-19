@@ -56,14 +56,14 @@ export default function Footer() {
             <div className="space-y-1.5 text-sm text-background/90">
               <div className="flex items-center gap-2">
                 <Clock className="w-3.5 h-3.5 text-accent shrink-0" />
-                <span>Lundi – Vendredi</span>
+                  <span>Lundi – Samedi</span>
               </div>
               <p className="ml-5.5 pl-0.5 font-semibold text-background">10h30 – 2h00</p>
               <div className="flex items-center gap-2 mt-2">
                 <Clock className="w-3.5 h-3.5 text-accent shrink-0" />
-                <span>Samedi – Dimanche</span>
+                  <span>Dimanche</span>
               </div>
-              <p className="ml-5.5 pl-0.5 font-semibold text-background">10h30 – 2h00</p>
+              <p className="ml-5.5 pl-0.5 font-semibold text-background">10h30 – 21h30</p>
               <div className="mt-3 flex items-center gap-1.5">
                 <div className="w-2 h-2 rounded-full bg-green-400" />
                 <span className="text-background/90 text-xs">Avec ou sans rendez-vous</span>

@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Massage à Alésia, Paris 14e | Bien Être Alésia</title>
-    <meta name="description" content="Institut de massage à Paris 14e, près du métro Alésia. Massages relaxants, chinois, pierres chaudes et réflexologie. Tous les jours de 10h30 à 2h00." />
+    <meta name="description" content="Institut de massage à Paris 14e, près du métro Alésia. Ouvert de 10h30 à 2h00 du lundi au samedi et jusqu’à 21h30 le dimanche." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://alesiabienetre.fr/" />
     <meta property="og:title" content="Bien Être Alésia — Institut de Massage Paris 14e" />
@@ -58,12 +58,20 @@
             "latitude": 48.8285,
             "longitude": 2.3247
           },
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "10:30",
-            "closes": "02:00"
-          }
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "10:30",
+              "closes": "02:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Sunday",
+              "opens": "10:30",
+              "closes": "21:30"
+            }
+          ]
         }
       ]
     }

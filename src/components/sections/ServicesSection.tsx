@@ -143,7 +143,11 @@ export default function ServicesSection() {
                   </span>
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">{s.description}</p>
-                <p className="mt-4 rounded-lg border border-primary/25 bg-secondary/50 px-3 py-2 text-sm font-semibold text-primary">{s.price}</p>
+                <p className="mt-4 rounded-lg border border-primary/25 bg-secondary/50 px-3 py-2 text-sm font-semibold text-primary">
+                  {s.price.split(' · ').map((price) => (
+                    <span key={price} className="block whitespace-nowrap leading-relaxed">{price}</span>
+                  ))}
+                </p>
                 <a
                   href="tel:+33772887952"
                   className="mt-4 inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:underline group"

@@ -55,18 +55,20 @@ export default function PricingSection() {
                 <h3 className="font-serif text-white font-semibold text-lg">Grille tarifaire</h3>
                 <p className="text-white/70 text-xs mt-0.5">Tarifs indicatifs — nous contacter pour soins esthétiques</p>
               </div>
-              <div className="p-3 sm:p-4 space-y-3">
+              <div className="p-4 sm:p-5 space-y-4 bg-secondary/30">
                 {prices.map((p) => (
                   <div
                     key={p.name}
-                    className="rounded-xl border-2 border-primary/25 bg-background overflow-hidden"
+                    className="relative rounded-2xl border border-primary/10 bg-card px-5 py-4 shadow-sm overflow-hidden"
                   >
-                    <h4 className="px-4 py-2.5 bg-secondary/70 text-foreground text-sm font-semibold border-b border-primary/15">{p.name}</h4>
-                    <div className={`grid ${p.options.length > 1 ? 'grid-cols-2 divide-x divide-primary/20' : 'grid-cols-1'}`}>
+                    <span aria-hidden="true" className="absolute left-0 top-5 bottom-5 w-0.5 rounded-full bg-accent/70" />
+                    <h4 className="font-serif text-primary text-lg font-semibold leading-snug mb-3">{p.name}</h4>
+                    <div className="flex flex-wrap gap-2 sm:gap-3">
                       {p.options.map((option) => (
-                        <div key={option.duration} className="flex flex-wrap items-center justify-between gap-2 px-4 py-3">
-                          <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full whitespace-nowrap">{option.duration}</span>
-                          <span className="font-serif font-semibold text-primary text-lg whitespace-nowrap">{option.price}</span>
+                        <div key={option.duration} className="inline-flex items-baseline gap-3 rounded-xl bg-secondary/60 px-3 py-2">
+                          <span className="text-sm text-muted-foreground whitespace-nowrap">{option.duration}</span>
+                          <span aria-hidden="true" className="text-primary/30">·</span>
+                          <span className="font-serif font-semibold text-primary text-xl whitespace-nowrap">{option.price}</span>
                         </div>
                       ))}
                     </div>

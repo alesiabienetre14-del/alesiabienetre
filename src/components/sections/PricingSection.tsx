@@ -6,7 +6,7 @@ const prices = [
   { name: 'Massage tonique', options: [{ duration: '30 min', price: '40 €' }, { duration: '60 min', price: '60 €' }] },
   { name: 'Massage 4 mains', options: [{ duration: '30 min', price: '70 €' }, { duration: '60 min', price: '130 €' }] },
   { name: 'Massage aux pierres chaudes', options: [{ duration: '60 min', price: '75 €' }] },
-  { name: 'Réflexologie plantaire', options: [{ duration: '45 min', price: '45 €' }] },
+  { name: 'Réflexologie plantaire', options: [{ duration: '30 min', price: '45 €' }] },
   { name: 'Massage du dos', options: [{ duration: '30 min', price: '35 €' }] },
 ]
 

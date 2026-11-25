@@ -52,8 +52,8 @@ const services = [
     height: 1024,
     title: 'Réflexologie Plantaire',
     description: 'Chaque point de réflexe du pied correspond à un organe. Ce soin rééquilibre et revitalise l\'ensemble du corps depuis la plante des pieds.',
-    duration: '45 min',
-    price: '45 min : 45 €',
+    duration: '30 min',
+    price: '30 min : 45 €',
     tag: 'Bien-être',
   },
   {

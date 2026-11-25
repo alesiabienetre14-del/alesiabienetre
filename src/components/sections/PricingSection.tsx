@@ -1,14 +1,13 @@
 import { Phone } from 'lucide-react'
 
 const prices = [
-  { name: 'Massage relaxant', duration: '30 min', price: '35 €' },
-  { name: 'Massage relaxant', duration: '60 min', price: '55 €' },
-  { name: 'Massage relaxant', duration: '90 min', price: '75 €' },
-  { name: 'Massage chinois', duration: '60 min', price: '55 €' },
-  { name: 'Massage Royal 4 mains', duration: '60 min', price: '90 €' },
-  { name: 'Massage aux pierres chaudes', duration: '90 min', price: '85 €' },
-  { name: 'Réflexologie plantaire', duration: '45 min', price: '45 €' },
-  { name: 'Massage du dos', duration: '30 min', price: '35 €' },
+  { name: 'Massage relaxant', options: [{ duration: '30 min', price: '40 €' }, { duration: '60 min', price: '60 €' }] },
+  { name: 'Massage chinois', options: [{ duration: '30 min', price: '35 €' }, { duration: '60 min', price: '55 €' }] },
+  { name: 'Massage tonique', options: [{ duration: '30 min', price: '40 €' }, { duration: '60 min', price: '60 €' }] },
+  { name: 'Massage 4 mains', options: [{ duration: '30 min', price: '70 €' }, { duration: '60 min', price: '130 €' }] },
+  { name: 'Massage aux pierres chaudes', options: [{ duration: '60 min', price: '75 €' }] },
+  { name: 'Réflexologie plantaire', options: [{ duration: '45 min', price: '45 €' }] },
+  { name: 'Massage du dos', options: [{ duration: '30 min', price: '35 €' }] },
 ]
 
 export default function PricingSection() {
@@ -56,17 +55,21 @@ export default function PricingSection() {
                 <h3 className="font-serif text-white font-semibold text-lg">Grille tarifaire</h3>
                 <p className="text-white/70 text-xs mt-0.5">Tarifs indicatifs — nous contacter pour soins esthétiques</p>
               </div>
-              <div className="divide-y divide-border">
-                {prices.map((p, i) => (
+              <div className="p-3 sm:p-4 space-y-3">
+                {prices.map((p) => (
                   <div
-                    key={`${p.name}-${p.duration}`}
-                    className="flex items-center justify-between px-5 py-3.5 hover:bg-secondary/40 transition-colors"
+                    key={p.name}
+                    className="rounded-xl border-2 border-primary/25 bg-background overflow-hidden"
                   >
-                    <div>
-                      <span className="text-foreground text-sm font-medium">{p.name}</span>
-                      <span className="ml-2 text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">{p.duration}</span>
+                    <h4 className="px-4 py-2.5 bg-secondary/70 text-foreground text-sm font-semibold border-b border-primary/15">{p.name}</h4>
+                    <div className={`grid ${p.options.length > 1 ? 'grid-cols-2 divide-x divide-primary/20' : 'grid-cols-1'}`}>
+                      {p.options.map((option) => (
+                        <div key={option.duration} className="flex flex-wrap items-center justify-between gap-2 px-4 py-3">
+                          <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full whitespace-nowrap">{option.duration}</span>
+                          <span className="font-serif font-semibold text-primary text-lg whitespace-nowrap">{option.price}</span>
+                        </div>
+                      ))}
                     </div>
-                    <span className="font-serif font-semibold text-primary text-base">{p.price}</span>
                   </div>
                 ))}
               </div>

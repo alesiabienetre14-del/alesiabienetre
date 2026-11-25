@@ -12,7 +12,8 @@ const services = [
     height: 1024,
     title: 'Massage Relaxant',
     description: 'Un voyage sensoriel pour détendre l\'esprit et le corps. Techniques douces et enveloppantes, idéales pour libérer les tensions du quotidien.',
-    duration: '60 min',
+    duration: '30 ou 60 min',
+    price: '30 min : 40 € · 60 min : 60 €',
     tag: 'Le plus demandé',
   },
   {
@@ -21,7 +22,8 @@ const services = [
     height: 983,
     title: 'Massage aux Pierres Chaudes',
     description: 'La chaleur des pierres volcaniques pénètre en profondeur pour dénouer les tensions musculaires et favoriser une détente totale.',
-    duration: '90 min',
+    duration: '60 min',
+    price: '60 min : 75 €',
     tag: 'Coup de cœur',
   },
   {
@@ -30,16 +32,18 @@ const services = [
     height: 1024,
     title: 'Massage Chinois Traditionnel',
     description: 'Inspiré de l\'ancienne médecine chinoise, ce massage rééquilibre les énergies, stimule les méridiens et revitalise l\'organisme.',
-    duration: '60 min',
+    duration: '30 ou 60 min',
+    price: '30 min : 35 € · 60 min : 55 €',
     tag: 'Tradition',
   },
   {
     img: FOUR_HANDS_IMG,
     width: 1536,
     height: 1024,
-    title: 'Massage Royal aux 4 Mains',
+    title: 'Massage 4 mains',
     description: 'Une expérience unique : deux masseuses expérimentées œuvrent en harmonie pour un soin complet, profondément relaxant.',
-    duration: '60 min',
+    duration: '30 ou 60 min',
+    price: '30 min : 70 € · 60 min : 130 €',
     tag: 'Exclusif',
   },
   {
@@ -49,7 +53,28 @@ const services = [
     title: 'Réflexologie Plantaire',
     description: 'Chaque point de réflexe du pied correspond à un organe. Ce soin rééquilibre et revitalise l\'ensemble du corps depuis la plante des pieds.',
     duration: '45 min',
+    price: '45 min : 45 €',
     tag: 'Bien-être',
+  },
+  {
+    img: '/images/massage-tonique.png',
+    width: 1536,
+    height: 1024,
+    title: 'Massage tonique',
+    description: 'Un massage dynamique aux gestes appuyés, avec une pression adaptée à vos préférences, pour une pause bien-être énergisante.',
+    duration: '30 ou 60 min',
+    price: '30 min : 40 € · 60 min : 60 €',
+    tag: 'Énergie',
+  },
+  {
+    img: '/images/massage-dos.png',
+    width: 1536,
+    height: 1024,
+    title: 'Massage du dos',
+    description: 'Une séance ciblée sur le dos pour un moment de détente, avec des gestes et une pression adaptés à votre confort.',
+    duration: '30 min',
+    price: '30 min : 35 €',
+    tag: 'Détente ciblée',
   },
   {
     img: BEAUTY_IMG,
@@ -58,6 +83,7 @@ const services = [
     title: 'Soins Esthétiques',
     description: 'Épilation, soin du visage et soins du corps pour un moment de beauté et de sérénité. Notre équipe vous accueille avec la plus grande attention.',
     duration: 'Sur devis',
+    price: 'Tarif sur devis',
     tag: 'Beauté',
   },
 ]
@@ -80,7 +106,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
             <article
               key={s.title}
@@ -88,7 +114,7 @@ export default function ServicesSection() {
               style={{ transitionDelay: `${i * 70}ms` }}
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              {s.img ? <div className="relative h-48 overflow-hidden">
                 <img
                   src={s.img}
                   alt={s.title}
@@ -102,17 +128,22 @@ export default function ServicesSection() {
                 <span className="absolute top-3 right-3 text-xs font-semibold bg-primary text-primary-foreground px-2.5 py-1 rounded-full">
                   {s.tag}
                 </span>
-              </div>
+              </div> : <div className="h-48 bg-secondary flex flex-col items-center justify-center gap-3 border-b border-primary/20 px-5 text-center">
+                <span className="text-xs tracking-widest uppercase text-primary">{s.tag}</span>
+                <span className="font-serif text-2xl text-primary">{s.title}</span>
+                <span className="text-xs text-muted-foreground">Bien Être Alésia</span>
+              </div>}
 
               {/* Content */}
               <div className="p-5">
-                <div className="flex items-start justify-between mb-2">
+                <div className="flex flex-wrap items-start gap-2 mb-2">
                   <h3 className="font-serif font-semibold text-foreground text-lg leading-snug">{s.title}</h3>
                   <span className="text-xs text-muted-foreground bg-secondary px-2 py-0.5 rounded-full ml-2 shrink-0">
                     {s.duration}
                   </span>
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">{s.description}</p>
+                <p className="mt-4 rounded-lg border border-primary/25 bg-secondary/50 px-3 py-2 text-sm font-semibold text-primary">{s.price}</p>
                 <a
                   href="tel:+33772887952"
                   className="mt-4 inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:underline group"

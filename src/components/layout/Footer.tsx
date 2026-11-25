@@ -38,7 +38,9 @@ export default function Footer() {
               {[
                 'Massage relaxant',
                 'Massage chinois',
-                'Massage Royal 4 mains',
+                'Massage tonique',
+                'Massage 4 mains',
+                'Massage du dos',
                 'Pierres chaudes',
                 'Réflexologie plantaire',
                 'Soins esthétiques',
